@@ -1,2 +1,2 @@
 #discesaVersoL'Oro
-to do
+
