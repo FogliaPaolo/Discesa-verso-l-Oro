@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discesa verso l'oro - Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        body {
+            /* Sfondo migliorato con overlay scuro integrato */
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('./img/logoPCTO.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: #0a0a0a;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Contenitore Principale che tiene uniti Titolo e Menu */
+        .main-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px; /* Spazio tra titolo e bottoni */
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+        }
+
+        .main-title {
+            color: #fff;
+            font-size: clamp(1.5rem, 6vw, 3rem);
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 5px;
+            font-weight: 900;
+            text-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+            line-height: 1.2;
+        }
+
+        .menu-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .btn-wrapper {
+            text-decoration: none;
+            width: 100%;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            border: 2px solid transparent;
+            border-radius: 4px; /* Angoli più netti per un look tecnico */
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            position: relative;
+            backdrop-filter: blur(5px);
+        }
+
+        /* 1. Stile specifico GIOCA (Rosso/Fuoco) */
+        .btn-play {
+            border-left: 4px solid #ff0000;
+            box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.1);
+        }
+        .btn-play:hover {
+            background: #ff0000;
+            box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
+            transform: scale(1.05);
+        }
+
+        /* 2. Stile specifico VOLUME (Azzurro/Elettronico) */
+        .btn-volume {
+            border-left: 4px solid #00d4ff;
+            box-shadow: inset 0 0 10px rgba(0, 212, 255, 0.1);
+        }
+        .btn-volume:hover {
+            background: #00d4ff;
+            color: #000;
+            box-shadow: 0 0 25px rgba(0, 212, 255, 0.6);
+            transform: scale(1.05);
+        }
+
+        /* 3. Stile specifico SITO (Oro/Premium) */
+        .btn-sito {
+            border-left: 4px solid #ffcc00;
+            box-shadow: inset 0 0 10px rgba(255, 204, 0, 0.1);
+        }
+        .btn-sito:hover {
+            background: #ffcc00;
+            color: #000;
+            box-shadow: 0 0 25px rgba(255, 204, 0, 0.6);
+            transform: scale(1.05);
+        }
+
+        /* Effetto Scanline (opzionale per tocco retro-gaming) */
+        body::before {
+            content: " ";
+            position: fixed;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.15) 50%), 
+                        linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+            background-size: 100% 4px, 3px 100%;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <h1 class="main-title">Discesa verso<br>l'oro❄️</h1>
+
+        <div class="menu-container">
+            <a href="personaggi.html" class="btn-wrapper">
+                <button class="btn btn-play">GIOCA</button>
+            </a> 
+            
+            <a href="volume.html" class="btn-wrapper">
+                <button class="btn btn-volume">VOLUME</button>
+            </a>
+
+            <a href="indexSito.html" class="btn-wrapper">
+                <button class="btn btn-sito">SITO</button>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
