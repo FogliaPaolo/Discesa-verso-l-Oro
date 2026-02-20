@@ -1,2 +1,0 @@
-# Discesa verso l'oro!!
-
